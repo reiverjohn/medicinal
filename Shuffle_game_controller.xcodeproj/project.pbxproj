@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C260F60F1C998E16000F849A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F60E1C998E16000F849A /* AppDelegate.swift */; };
+		C260F6181C998E36000F849A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C260F6101C998E36000F849A /* Assets.xcassets */; };
+		C260F6191C998E36000F849A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C260F6111C998E36000F849A /* Base.lproj */; };
+		C260F61A1C998E36000F849A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C260F6121C998E36000F849A /* Info.plist */; };
+		C260F61B1C998E36000F849A /* IpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6131C998E36000F849A /* IpadViewController.swift */; };
+		C260F61C1C998E36000F849A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6141C998E36000F849A /* QRViewController.swift */; };
+		C260F61D1C998E36000F849A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6151C998E36000F849A /* QuestionsViewController.swift */; };
+		C260F61E1C998E36000F849A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6161C998E36000F849A /* QuizViewController.swift */; };
+		C260F61F1C998E36000F849A /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6171C998E36000F849A /* ViewController1.swift */; };
+		C5A6308C1BFE68ED008CAC2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6308A1BFE68ED008CAC2B /* Main.storyboard */; };
+		C5A630911BFE68ED008CAC2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6308F1BFE68ED008CAC2B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C260F60E1C998E16000F849A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C260F6101C998E36000F849A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C260F6111C998E36000F849A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		C260F6121C998E36000F849A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C260F6131C998E36000F849A /* IpadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpadViewController.swift; sourceTree = "<group>"; };
+		C260F6141C998E36000F849A /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		C260F6151C998E36000F849A /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		C260F6161C998E36000F849A /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		C260F6171C998E36000F849A /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		C5A630831BFE68EC008CAC2B /* Shuffle_game_controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shuffle_game_controller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A6308B1BFE68ED008CAC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5A630901BFE68ED008CAC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5A630801BFE68EC008CAC2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5A6307A1BFE68EC008CAC2B = {
+			isa = PBXGroup;
+			children = (
+				C5A630851BFE68EC008CAC2B /* Shuffle_game_controller */,
+				C5A630841BFE68EC008CAC2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5A630841BFE68EC008CAC2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A630831BFE68EC008CAC2B /* Shuffle_game_controller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5A630851BFE68EC008CAC2B /* Shuffle_game_controller */ = {
+			isa = PBXGroup;
+			children = (
+				C260F60E1C998E16000F849A /* AppDelegate.swift */,
+				C260F6101C998E36000F849A /* Assets.xcassets */,
+				C260F6111C998E36000F849A /* Base.lproj */,
+				C260F6121C998E36000F849A /* Info.plist */,
+				C260F6131C998E36000F849A /* IpadViewController.swift */,
+				C260F6141C998E36000F849A /* QRViewController.swift */,
+				C260F6151C998E36000F849A /* QuestionsViewController.swift */,
+				C260F6161C998E36000F849A /* QuizViewController.swift */,
+				C260F6171C998E36000F849A /* ViewController1.swift */,
+				C5A6308A1BFE68ED008CAC2B /* Main.storyboard */,
+				C5A6308F1BFE68ED008CAC2B /* LaunchScreen.storyboard */,
+			);
+			path = Shuffle_game_controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5A630821BFE68EC008CAC2B /* Shuffle_game_controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5A630951BFE68ED008CAC2B /* Build configuration list for PBXNativeTarget "Shuffle_game_controller" */;
+			buildPhases = (
+				C5A6307F1BFE68EC008CAC2B /* Sources */,
+				C5A630801BFE68EC008CAC2B /* Frameworks */,
+				C5A630811BFE68EC008CAC2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shuffle_game_controller;
+			productName = Shuffle_game_controller;
+			productReference = C5A630831BFE68EC008CAC2B /* Shuffle_game_controller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5A6307B1BFE68EC008CAC2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = cleisner;
+				TargetAttributes = {
+					C5A630821BFE68EC008CAC2B = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C5A6307E1BFE68EC008CAC2B /* Build configuration list for PBXProject "Shuffle_game_controller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5A6307A1BFE68EC008CAC2B;
+			productRefGroup = C5A630841BFE68EC008CAC2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5A630821BFE68EC008CAC2B /* Shuffle_game_controller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5A630811BFE68EC008CAC2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A630911BFE68ED008CAC2B /* LaunchScreen.storyboard in Resources */,
+				C260F61A1C998E36000F849A /* Info.plist in Resources */,
+				C260F6191C998E36000F849A /* Base.lproj in Resources */,
+				C260F6181C998E36000F849A /* Assets.xcassets in Resources */,
+				C5A6308C1BFE68ED008CAC2B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5A6307F1BFE68EC008CAC2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C260F61E1C998E36000F849A /* QuizViewController.swift in Sources */,
+				C260F61F1C998E36000F849A /* ViewController1.swift in Sources */,
+				C260F61C1C998E36000F849A /* QRViewController.swift in Sources */,
+				C260F60F1C998E16000F849A /* AppDelegate.swift in Sources */,
+				C260F61D1C998E36000F849A /* QuestionsViewController.swift in Sources */,
+				C260F61B1C998E36000F849A /* IpadViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5A6308A1BFE68ED008CAC2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A6308B1BFE68ED008CAC2B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5A6308F1BFE68ED008CAC2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5A630901BFE68ED008CAC2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5A630931BFE68ED008CAC2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C5A630941BFE68ED008CAC2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5A630961BFE68ED008CAC2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Shuffle_game_controller/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Courtney-Leisner.Shuffle-game-controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5A630971BFE68ED008CAC2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Shuffle_game_controller/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Courtney-Leisner.Shuffle-game-controller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5A6307E1BFE68EC008CAC2B /* Build configuration list for PBXProject "Shuffle_game_controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A630931BFE68ED008CAC2B /* Debug */,
+				C5A630941BFE68ED008CAC2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5A630951BFE68ED008CAC2B /* Build configuration list for PBXNativeTarget "Shuffle_game_controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5A630961BFE68ED008CAC2B /* Debug */,
+				C5A630971BFE68ED008CAC2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5A6307B1BFE68EC008CAC2B /* Project object */;
+}

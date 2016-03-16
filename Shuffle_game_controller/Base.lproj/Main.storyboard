@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s6H-o3-fVc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller1-->
+        <scene sceneID="i0O-ba-En2">
+            <objects>
+                <viewController id="Jje-BE-xBH" customClass="ViewController1" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DnT-Ch-iAU"/>
+                        <viewControllerLayoutGuide type="bottom" id="eOq-Bc-y4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U6B-4c-tVt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjc-Ii-qzQ">
+                                <rect key="frame" x="0.0" y="103" width="600" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you want to become a Plant Detective?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-zr-oDf">
+                                <rect key="frame" x="0.0" y="215" width="600" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="detective" translatesAutoresizingMaskIntoConstraints="NO" id="2YJ-r6-klq">
+                                <rect key="frame" x="180" y="362" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hit 'Go' to get started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb4-57-eoa">
+                                <rect key="frame" x="0.0" y="297" width="600" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyf-1U-Qre">
+                                <rect key="frame" x="275" y="514" width="50" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <segue destination="Q2V-rm-Ow8" kind="show" id="FjM-27-YPI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Fs-Ez-T7X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYg-Le-0ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="564"/>
+        </scene>
+        <!--Ipad View Controller-->
+        <scene sceneID="4zA-AX-EAP">
+            <objects>
+                <viewController id="Q2V-rm-Ow8" customClass="IpadViewController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gSf-Dm-LqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="jtj-yQ-47p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qos-Gv-6g8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-6c-DVW">
+                                <rect key="frame" x="200" y="230" width="200" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Black">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="Q2V-rm-Ow8" eventType="touchUpInside" id="HG2-KH-MLM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHy-ze-ZMb">
+                                <rect key="frame" x="200" y="360" width="200" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.32492181920000002" blue="0.98405884799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pink">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="Q2V-rm-Ow8" eventType="touchUpInside" id="ovL-Th-F91"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xab-9a-x9J">
+                                <rect key="frame" x="200" y="100" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.26268050339999999" green="0.41599958929999997" blue="0.98579545449999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Blue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="Q2V-rm-Ow8" eventType="touchUpInside" id="nXF-bO-g7B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="xab-9a-x9J" id="VcU-dP-F4M"/>
+                        <outlet property="button2" destination="Nen-6c-DVW" id="Wpc-KN-aNr"/>
+                        <outlet property="button3" destination="GHy-ze-ZMb" id="KW3-hP-3JD"/>
+                        <segue destination="jWh-B1-Ccj" kind="show" identifier="segueToQuiz" id="9CV-fj-bgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1k-5J-ejd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095" y="564"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="FB2-sS-vEA">
+            <objects>
+                <viewController id="jWh-B1-Ccj" customClass="QuizViewController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfj-Sc-4xH"/>
+                        <viewControllerLayoutGuide type="bottom" id="wCf-vD-qzU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Yc-Bn-m1H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6SR-1J-co6">
+                                <rect key="frame" x="203" y="96" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LaF-3r-1E4">
+                                <rect key="frame" x="203" y="241" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHN-b2-V4O">
+                                <rect key="frame" x="203" y="388" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-vU-riX">
+                                <rect key="frame" x="458" y="555" width="122" height="30"/>
+                                <state key="normal" title="QR Code Scanner"/>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="jWh-B1-Ccj" eventType="touchUpInside" id="8CA-uH-1N5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="Image1" destination="6SR-1J-co6" id="Nzq-G3-Efz"/>
+                        <outlet property="Image2" destination="LaF-3r-1E4" id="1Xf-tb-MWp"/>
+                        <outlet property="Image3" destination="zHN-b2-V4O" id="HeM-Fd-cdJ"/>
+                        <outlet property="qrbutton" destination="f4e-vU-riX" id="fi7-JM-LYO"/>
+                        <segue destination="9AS-Zl-kEv" kind="show" identifier="segueToQRScanner" id="KDS-e5-Y5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GF-fa-nSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="564"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mD3-yz-2L4">
+            <objects>
+                <viewController id="9AS-Zl-kEv" customClass="QRViewController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZhF-l3-mNh"/>
+                        <viewControllerLayoutGuide type="bottom" id="zI9-C9-mys"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VDP-e6-1Mk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="okr-a4-p6g" kind="show" id="SwB-D5-Jf2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EmQ-1u-40Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3395" y="564"/>
+        </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="UJc-TZ-KW8">
+            <objects>
+                <viewController id="okr-a4-p6g" customClass="QuestionsViewController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yly-EM-fJs"/>
+                        <viewControllerLayoutGuide type="bottom" id="paa-G8-grl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3E3-ik-BBm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" This plant is used in making: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-tA-c3Y">
+                                <rect key="frame" x="0.0" y="93" width="600" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
+                                <rect key="frame" x="116" y="209" width="133" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzJ-mV-0HO">
+                                <rect key="frame" x="116" y="373" width="133" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-Mp-BDS">
+                                <rect key="frame" x="116" y="287" width="133" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-nA-dJd">
+                                <rect key="frame" x="388" y="214" width="118" height="30"/>
+                                <state key="normal" title="Choose Answer 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-yv-7Jw">
+                                <rect key="frame" x="387" y="376" width="121" height="30"/>
+                                <state key="normal" title="Choose Answer 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
+                                <rect key="frame" x="387" y="293" width="120" height="30"/>
+                                <state key="normal" title="Choose Answer 2"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="bUc-nA-dJd" id="AqN-DO-r03"/>
+                        <outlet property="button2" destination="3dW-Sc-ksA" id="bR8-rm-gdI"/>
+                        <outlet property="button3" destination="xjY-yv-7Jw" id="svN-EO-4eO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4048" y="564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jbf-wd-40e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6H-o3-fVc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fGy-JR-Y96">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jje-BE-xBH" kind="relationship" relationship="rootViewController" id="wVO-Pb-Xak"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1e-Jz-FYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="564"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="detective" width="391" height="311"/>
+    </resources>
+</document>
