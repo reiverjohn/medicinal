@@ -1,5 +1,5 @@
 # medicinal
-Development app for 4H Children's Garden.
+Medicinal Plant app for 4H Children's Garden.
 
 The current app is under development and not yet fully functional.
 
