@@ -52,6 +52,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             alertView.show()
             return
         }
+
         objCaptureSession = AVCaptureSession()
         objCaptureSession?.addInput(objCaptureDeviceInput as! AVCaptureInput)
         let objCaptureMetadataOutput = AVCaptureMetadataOutput()
@@ -81,7 +82,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         if metadataObjects == nil || metadataObjects.count == 0 {
             vwQRCode?.frame = CGRectZero
-            lblQRCodeResult.text = "NO QRCode text detacted"
+            lblQRCodeResult.text = "NO QRCode text detected"
             return
         }
         let objMetadataMachineReadableCodeObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
