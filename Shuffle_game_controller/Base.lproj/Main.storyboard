@@ -173,17 +173,30 @@
                                     <action selector="answerButtonPressed:" destination="jWh-B1-Ccj" eventType="touchUpInside" id="8CA-uH-1N5"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Plant Name" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsA-j6-pZA">
+                                <rect key="frame" x="32" y="555" width="121" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="72n-6Q-65U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BsA-j6-pZA" secondAttribute="bottom" constant="20" symbolic="YES" id="PgT-ct-EpH"/>
                             <constraint firstItem="f4e-vU-riX" firstAttribute="trailing" secondItem="1Yc-Bn-m1H" secondAttribute="trailingMargin" id="cq1-Di-1BP"/>
+                            <constraint firstItem="BsA-j6-pZA" firstAttribute="top" secondItem="f4e-vU-riX" secondAttribute="top" id="cqe-m9-Gqc"/>
                             <constraint firstItem="wCf-vD-qzU" firstAttribute="top" secondItem="f4e-vU-riX" secondAttribute="bottom" constant="15" id="cvI-IC-Pwj"/>
+                            <constraint firstItem="BsA-j6-pZA" firstAttribute="leading" secondItem="1Yc-Bn-m1H" secondAttribute="leadingMargin" constant="12" id="lpV-Os-mj0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Image1" destination="6SR-1J-co6" id="Nzq-G3-Efz"/>
                         <outlet property="Image2" destination="LaF-3r-1E4" id="1Xf-tb-MWp"/>
                         <outlet property="Image3" destination="zHN-b2-V4O" id="HeM-Fd-cdJ"/>
+                        <outlet property="myplant" destination="BsA-j6-pZA" id="Ooy-Br-kGY"/>
                         <outlet property="qrbutton" destination="f4e-vU-riX" id="fi7-JM-LYO"/>
                         <segue destination="9AS-Zl-kEv" kind="show" identifier="segueToQRScanner" id="KDS-e5-Y5o"/>
                     </connections>
@@ -219,6 +232,19 @@
                                 <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0K-QP-SOe">
+                                <rect key="frame" x="552" y="95" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtC-LB-Yvj">
+                                <rect key="frame" x="506" y="80" width="74" height="30"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <segue destination="okr-a4-p6g" kind="show" identifier="testTrans" action="showDetailViewController:sender:" id="apv-QN-H10"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -327,5 +353,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KDS-e5-Y5o"/>
+        <segue reference="apv-QN-H10"/>
     </inferredMetricsTieBreakers>
 </document>

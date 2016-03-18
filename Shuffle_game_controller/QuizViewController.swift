@@ -17,16 +17,17 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var Image3: UIImageView!
     @IBOutlet weak var qrbutton: UIButton!
     
-    
     var color = 0
     var lower = 0
     var upper = 0
     var current = 0
     
+    // MOD FOR DEVEL
+    @IBOutlet weak var myplant: UITextView!
+    
     var plants = [String]() // names of plant images
     var randomPlant = Int() // this is the random number that shows which plant to show
     var donePlants = [Int:String]() // this keeps track of which plants have already been shown
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,10 @@ class QuizViewController: UIViewController {
         Image1.layer.borderColor = UIColor.lightGrayColor().CGColor
         Image2.layer.borderColor = UIColor.lightGrayColor().CGColor
         Image3.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
+        // MOD FOR DEVEL
+        myplant.layer.borderWidth = 1
+
         
         askQuestion() // this does the main work of the script
         
@@ -99,10 +104,11 @@ class QuizViewController: UIViewController {
         thirdimagefile += "_3" //add the "_3" to the end of the file
         Image3.image = UIImage(named: thirdimagefile)
         
+       // MOD FOR DEVEL
+        myplant.text = plants[randomPlant]
     }
     
-    @IBOutlet weak var myplant: UITextField!
-    
+
     @IBAction func answerButtonPressed(sender: UIButton) {
         self.performSegueWithIdentifier("segueToQRScanner", sender: nil)
     }
@@ -112,6 +118,7 @@ class QuizViewController: UIViewController {
         if segue.identifier == "segueToQRScanner" {  //This here tells the Navigation Controller which segue to use.
             let QRViewControllerSegue = segue.destinationViewController as! QRViewController
             QRViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
+
         }
     }
 

@@ -26,7 +26,6 @@ override func viewDidLoad() {
     button2.layer.borderColor = UIColor.lightGrayColor().CGColor
     button3.layer.borderColor = UIColor.lightGrayColor().CGColor
     
-
     }
     
     @IBAction func answerButtonPressed(sender: UIButton) {

@@ -11,6 +11,9 @@ import GameplayKit
 
 class QuestionsViewController: UIViewController {
     
+    // MOD
+    var array = 0
+    
     var plants = [String]()
     //var color = 0
     var answers = [String]()
@@ -32,12 +35,15 @@ class QuestionsViewController: UIViewController {
     }
     
     func askQuestion(action: UIAlertAction! = nil) {
+        
     }
     
     func gotoEnding(action: UIAlertAction! = nil) {
         self.performSegueWithIdentifier("segueToScoreViewController", sender: nil)  //This function can be called to start the segue to the score page
     }
-
+    
+    
+    
     /*
     @IBAction func answerButtonPressed(sender: UIButton) {
         ++numQuestions
@@ -48,6 +54,8 @@ class QuestionsViewController: UIViewController {
             }
         }
 }
+    
+    
     
    @IBAction func answerButtonPressed(sender: UIButton) {  //all of this needs to happens when you press the QR code scanner *********
         ++numQuestions  //This keeps track of how many questions you have asked
