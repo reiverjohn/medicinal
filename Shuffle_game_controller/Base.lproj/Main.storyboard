@@ -217,7 +217,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
                                 <rect key="frame" x="24" y="546" width="101" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="Ac7-28-ldp"/>
@@ -226,7 +226,7 @@
                                 <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
                                 <rect key="frame" x="133" y="546" width="462" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
@@ -238,13 +238,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtC-LB-Yvj">
-                                <rect key="frame" x="506" y="80" width="74" height="30"/>
-                                <state key="normal" title="Forward"/>
-                                <connections>
-                                    <segue destination="okr-a4-p6g" kind="show" identifier="testTrans" action="showDetailViewController:sender:" id="apv-QN-H10"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -260,7 +253,7 @@
                     <connections>
                         <outlet property="lblQRCodeLabel" destination="dX9-bt-pY1" id="pFi-Xc-eAg"/>
                         <outlet property="lblQRCodeResult" destination="YeX-dk-S7x" id="RoZ-Mp-24L"/>
-                        <segue destination="okr-a4-p6g" kind="show" identifier="trueTrans" id="SwB-D5-Jf2"/>
+                        <segue destination="okr-a4-p6g" kind="presentation" identifier="trueTrans" id="SwB-D5-Jf2"/>
                         <segue destination="aXK-it-N35" kind="showDetail" identifier="falseTrans" id="3yx-Ak-1Ir"/>
                     </connections>
                 </viewController>
@@ -287,34 +280,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
-                                <rect key="frame" x="116" y="209" width="133" height="35"/>
+                                <rect key="frame" x="85" y="209" width="302" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzJ-mV-0HO">
-                                <rect key="frame" x="116" y="373" width="133" height="35"/>
+                                <rect key="frame" x="85" y="373" width="302" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-Mp-BDS">
-                                <rect key="frame" x="116" y="287" width="133" height="41"/>
+                                <rect key="frame" x="85" y="287" width="302" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-nA-dJd">
-                                <rect key="frame" x="388" y="214" width="118" height="30"/>
+                                <rect key="frame" x="395" y="214" width="118" height="30"/>
                                 <state key="normal" title="Choose Answer 1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-yv-7Jw">
-                                <rect key="frame" x="387" y="376" width="121" height="30"/>
+                                <rect key="frame" x="395" y="373" width="121" height="30"/>
                                 <state key="normal" title="Choose Answer 3"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
-                                <rect key="frame" x="387" y="293" width="120" height="30"/>
+                                <rect key="frame" x="395" y="293" width="120" height="30"/>
                                 <state key="normal" title="Choose Answer 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xij-Dn-I7d">
+                                <rect key="frame" x="59" y="452" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <segue destination="jWh-B1-Ccj" kind="show" id="LOo-7G-tzH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -323,6 +323,9 @@
                         <outlet property="button1" destination="bUc-nA-dJd" id="AqN-DO-r03"/>
                         <outlet property="button2" destination="3dW-Sc-ksA" id="bR8-rm-gdI"/>
                         <outlet property="button3" destination="xjY-yv-7Jw" id="svN-EO-4eO"/>
+                        <outlet property="ranAnswer1" destination="AFc-Mp-BDS" id="K5w-1c-qVo"/>
+                        <outlet property="ranAnswer2" destination="hzJ-mV-0HO" id="sp6-gt-syf"/>
+                        <outlet property="rightanswer" destination="ma4-6e-UHn" id="1hf-Gq-PVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +355,7 @@
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="LOo-7G-tzH"/>
         <segue reference="KDS-e5-Y5o"/>
-        <segue reference="apv-QN-H10"/>
     </inferredMetricsTieBreakers>
 </document>
