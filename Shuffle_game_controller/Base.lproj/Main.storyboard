@@ -269,7 +269,7 @@
                         <outlet property="lblQRCodeLabel" destination="dX9-bt-pY1" id="pFi-Xc-eAg"/>
                         <outlet property="lblQRCodeResult" destination="YeX-dk-S7x" id="RoZ-Mp-24L"/>
                         <segue destination="okr-a4-p6g" kind="presentation" identifier="trueTrans" id="SwB-D5-Jf2"/>
-                        <segue destination="aXK-it-N35" kind="showDetail" identifier="falseTrans" id="3yx-Ak-1Ir"/>
+                        <segue destination="aXK-it-N35" kind="presentation" identifier="falseTrans" id="3yx-Ak-1Ir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmQ-1u-40Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -60,7 +60,7 @@ class WrongQRController: UIViewController {
         
         // MOD FOR DEVEL
         myplant.text = plants[array]
-        
+        return
     }
     
     
