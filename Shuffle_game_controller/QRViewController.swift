@@ -55,8 +55,14 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             QuestionsViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
             
         }
+        if segue.identifier == "falseTrans" {
+            let WrongQRControllerSegue = segue.destinationViewController as! WrongQRController
+            WrongQRControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
+            
+        }
     }
     // END SEGUE MOD
+    
         
     func configureVideoCapture() {
         let objCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)

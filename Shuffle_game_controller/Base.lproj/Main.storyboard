@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1455" y="564"/>
         </scene>
-        <!--View Controller-->
+        <!--WrongQRController-->
         <scene sceneID="0MK-3w-OOa">
             <objects>
-                <viewController id="aXK-it-N35" sceneMemberID="viewController">
+                <viewController title="WrongQRController" id="aXK-it-N35" customClass="WrongQRController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fb-Rn-C8b"/>
                         <viewControllerLayoutGuide type="bottom" id="p4t-BH-ORg"/>
@@ -74,20 +74,35 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="None" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-V3-dua">
+                                <rect key="frame" x="340" y="240" width="106" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're looking for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bX-qP-IqM">
+                                <rect key="frame" x="188" y="246" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJO-pm-hSg">
-                                <rect key="frame" x="297" y="264" width="34" height="30"/>
+                                <rect key="frame" x="283" y="285" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="9AS-Zl-kEv" kind="showDetail" id="55X-Cz-Jjl"/>
+                                    <segue destination="9AS-Zl-kEv" kind="presentation" identifier="segueToQRScanner" id="55X-Cz-Jjl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="myplant" destination="Gdo-V3-dua" id="Jqm-ne-l5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEw-NY-6b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="1478"/>
+            <point key="canvasLocation" x="3514" y="1426"/>
         </scene>
         <!--Ipad View Controller-->
         <scene sceneID="4zA-AX-EAP">
@@ -259,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmQ-1u-40Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3391" y="564"/>
+            <point key="canvasLocation" x="3514" y="564"/>
         </scene>
         <!--Questions View Controller-->
         <scene sceneID="UJc-TZ-KW8">
@@ -330,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4048" y="564"/>
+            <point key="canvasLocation" x="4236" y="571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jbf-wd-40e">
@@ -355,7 +370,7 @@
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="55X-Cz-Jjl"/>
         <segue reference="LOo-7G-tzH"/>
-        <segue reference="KDS-e5-Y5o"/>
     </inferredMetricsTieBreakers>
 </document>
