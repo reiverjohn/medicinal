@@ -33,6 +33,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var plants = [String]()
     var answers = [String]()
     var randomPlant = Int() // this is the random number that shows which plant to show
+    //var doneList = [Int:String]()
+    var donePlants: Set<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +55,12 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if segue.identifier == "trueTrans" {  //This here tells the Navigation Controller which segue to use.
             let QuestionsViewControllerSegue = segue.destinationViewController as! QuestionsViewController
             QuestionsViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
-            
+            QuestionsViewControllerSegue.donePlants = donePlants
         }
         if segue.identifier == "falseTrans" {
             let WrongQRControllerSegue = segue.destinationViewController as! WrongQRController
             WrongQRControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
-            
+            WrongQRControllerSegue.donePlants = donePlants
         }
     }
     // END SEGUE MOD

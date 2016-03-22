@@ -20,9 +20,10 @@ class WrongQRController: UIViewController {
     var randomPlant = Int() // this is the random number that shows which plant to show
     var numQuestions = 0 // this the how many questions the player is asked
     var score = 0 //this is how many questions the player has answered correctly
-    var donePlants = [Int:String]() // this keeps track of which plants have already been shown
+    //var donePlants = [Int:String]() // this keeps track of which plants have already been shown
     var ranIndex1 = Int()
     var ranIndex2 = Int()
+    var donePlants: Set<String> = []
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -52,7 +53,7 @@ class WrongQRController: UIViewController {
         if segue.identifier == "segueToQRScanner" {  //This here tells the Navigation Controller which segue to use.
             let QRViewControllerSegue = segue.destinationViewController as! QRViewController
             QRViewControllerSegue.array =  array  //This passes the value of the plant to the next View Controller
-            
+            QRViewControllerSegue.donePlants = donePlants
         }
     }
     

@@ -158,7 +158,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1k-5J-ejd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095" y="564"/>
+            <point key="canvasLocation" x="2114" y="556"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="8Z4-KV-tWp">
+            <objects>
+                <viewController id="w3a-1Q-6og" customClass="CompleteViewController" customModule="Shuffle_game_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3VA-Lf-5Ne"/>
+                        <viewControllerLayoutGuide type="bottom" id="j9Z-Cm-5SN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="68S-b7-tzD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DONE!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8x-BI-bFR">
+                                <rect key="frame" x="270" y="219" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-mB-YcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4252" y="1341"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="FB2-sS-vEA">
@@ -218,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GF-fa-nSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="564"/>
+            <point key="canvasLocation" x="2783" y="564"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mD3-yz-2L4">
@@ -294,12 +320,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
-                                <rect key="frame" x="85" y="209" width="302" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzJ-mV-0HO">
                                 <rect key="frame" x="85" y="373" width="302" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -328,9 +348,15 @@
                                 <rect key="frame" x="59" y="452" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
                                 <connections>
-                                    <segue destination="jWh-B1-Ccj" kind="show" id="LOo-7G-tzH"/>
+                                    <segue destination="jWh-B1-Ccj" kind="show" identifier="SequeToQuiz" id="LOo-7G-tzH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
+                                <rect key="frame" x="85" y="209" width="302" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -341,6 +367,7 @@
                         <outlet property="ranAnswer1" destination="AFc-Mp-BDS" id="K5w-1c-qVo"/>
                         <outlet property="ranAnswer2" destination="hzJ-mV-0HO" id="sp6-gt-syf"/>
                         <outlet property="rightanswer" destination="ma4-6e-UHn" id="1hf-Gq-PVe"/>
+                        <segue destination="w3a-1Q-6og" kind="showDetail" identifier="doneQuiz" id="X8k-3b-X9G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,7 +397,7 @@
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="55X-Cz-Jjl"/>
+        <segue reference="KDS-e5-Y5o"/>
         <segue reference="LOo-7G-tzH"/>
     </inferredMetricsTieBreakers>
 </document>

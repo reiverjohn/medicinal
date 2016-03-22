@@ -27,7 +27,9 @@ class QuizViewController: UIViewController {
     
     var plants = [String]() // names of plant images
     var randomPlant = Int() // this is the random number that shows which plant to show
-    var donePlants = [Int:String]() // this keeps track of which plants have already been shown
+    //var donePlants = [Int:String]() // this keeps track of which plants have already been shown
+    var donePlants: Set<String> = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class QuizViewController: UIViewController {
         
         // MOD FOR DEVEL
         myplant.layer.borderWidth = 1
-
+       
         
         askQuestion() // this does the main work of the script
         
@@ -53,49 +55,30 @@ class QuizViewController: UIViewController {
     //inout plants: Int, inout _ arraytwo: Int
     
     func askQuestion(action: UIAlertAction! = nil) {
-       /* if color == 0 {
-            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11)
-            lower == 0
-            upper == 9
-            current = current + 1
-        }
-        
-        if color == 1 {
-            lower == 11
-            upper == 20
-            current == current + 1
-        }
-        
-        if color == 2 {
-            lower == 21
-            upper == 30
-            current == current + 1
-        }
-*/
         
         if color == 0 { //blue ipad ***make sure button tags are 1, 2 and 3 for blue, black, pink
-            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11) // will generate a number between 0-10
+            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) // will generate a number between 0-10
             
-            while donePlants[randomPlant] == "DONE" { //this is not efficient, but it makes sure I don't repeat a plant
-                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11)  //This makes sure I don't repeat a question
+            while donePlants.contains(plants[randomPlant]) { //this is not efficient, but it makes sure I don't repeat a plant
+                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10)  //This makes sure I don't repeat a question
             }
         }
         if color == 1 {
-            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11) + 10// will generate a number between 11-20
-            
-            while donePlants[randomPlant] == "DONE" { //this is not efficient, but it makes sure I don't repeat a plant
-                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11) + 10  //This makes sure I don't repeat a question
+            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) + 10// will generate a number between 11-20
+            while donePlants.contains(plants[randomPlant]) {
+            //while donePlants[randomPlant] == "DONE" { //this is not efficient, but it makes sure I don't repeat a plant
+                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) + 10  //This makes sure I don't repeat a question
             }
         }
         if color == 2 {
-            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11) + 20 // will generate a number between 21-30
+            randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) + 20 // will generate a number between 21-30
             
-            while donePlants[randomPlant] == "DONE" { //this is not efficient, but it makes sure I don't repeat a plant
-                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(11) + 20 //This makes sure I don't repeat a question
+            while donePlants.contains(plants[randomPlant]) {
+                randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) + 20 //This makes sure I don't repeat a question
             }
         }
         
-        donePlants[randomPlant] = "DONE"  //Once a plant is used, mark it as so in the hash
+        donePlants.insert(plants[randomPlant])  //Once a plant is used, mark it as so in the hash
         Image1.image = UIImage(named: plants[randomPlant])  //This makes the center image start up
         var secondimagefile = plants[randomPlant]
         secondimagefile += "_2" //add the "_2" to the end of the file
@@ -118,6 +101,7 @@ class QuizViewController: UIViewController {
         if segue.identifier == "segueToQRScanner" {  //This here tells the Navigation Controller which segue to use.
             let QRViewControllerSegue = segue.destinationViewController as! QRViewController
             QRViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
+            QRViewControllerSegue.donePlants = donePlants
 
         }
     }
