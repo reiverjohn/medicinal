@@ -81,13 +81,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             //let alertView:UIAlertView = UIAlertView(title: "Device Error", message:"Device not Supported for this Application", delegate: nil, cancelButtonTitle: "Ok Done")
             let alertView = UIAlertController(title: "Device Error", message:"Device not Supported for this Application", preferredStyle: .Alert)
             //alertView.show()
-            let yesAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in
-                print("The user is okay.")
-            }
-            
-            let noAction = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in
-                print("The user is not okay.")
-            }
+            let yesAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
+            let noAction = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in}
             alertView.addAction(yesAction)
             alertView.addAction(noAction)
             self.presentViewController(alertView, animated: true, completion: nil)

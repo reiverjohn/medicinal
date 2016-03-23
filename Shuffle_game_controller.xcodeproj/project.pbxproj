@@ -10,7 +10,6 @@
 		C260F60F1C998E16000F849A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F60E1C998E16000F849A /* AppDelegate.swift */; };
 		C260F6181C998E36000F849A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C260F6101C998E36000F849A /* Assets.xcassets */; };
 		C260F6191C998E36000F849A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C260F6111C998E36000F849A /* Base.lproj */; };
-		C260F61A1C998E36000F849A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C260F6121C998E36000F849A /* Info.plist */; };
 		C260F61B1C998E36000F849A /* IpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6131C998E36000F849A /* IpadViewController.swift */; };
 		C260F61C1C998E36000F849A /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6141C998E36000F849A /* QRViewController.swift */; };
 		C260F61D1C998E36000F849A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6151C998E36000F849A /* QuestionsViewController.swift */; };
@@ -113,7 +112,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = cleisner;
 				TargetAttributes = {
 					C5A630821BFE68EC008CAC2B = {
@@ -146,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A630911BFE68ED008CAC2B /* LaunchScreen.storyboard in Resources */,
-				C260F61A1C998E36000F849A /* Info.plist in Resources */,
 				C260F6191C998E36000F849A /* Base.lproj in Resources */,
 				C260F6181C998E36000F849A /* Assets.xcassets in Resources */,
 				C5A6308C1BFE68ED008CAC2B /* Main.storyboard in Resources */,
