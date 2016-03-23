@@ -34,14 +34,13 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var ranAnswer1: UILabel!
     @IBOutlet weak var ranAnswer2: UILabel!
     
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         plants += ["cotton", "oats", "mint", "chamomile", "beet", "willow", "echinacea", "alfalfa", "madder", "calendula", "wheat", "flax", "lemon_balm", "eyeball_plant", "onion", "bedstraw", "gypsywort", "pumpkin", "sweet_pea", "st_johns_wort", "sunflower", "amaranth", "lavender", "aloe", "poppy", "buckwheat", "ramie", "red_clover", "fullers_teasel", "ginger"]
         answers += ["the jeans I wear", "the cereal, granola, or cookies I eat", "flavoring in my toothpaste", "the tea I drink to help me feel better", "food coloring", "medicine I take for a headache", "medicine I take for a cold", "food for cattle", "dying fabrics red", "dying fabrics yellow", "the bread I eat", "making linen sheets", "tea I drink and candy I eat", "treating toothaches", "practicing how to use a microscope", "the bed I sleep in", "dying fabrics black", "making a holiday pie", "making perfume", "treating depression", "making cooking oil", "dying fabrics red and as an edible grain", "making essential oils, perfumes and cosmetics", "treating a sunburng", "making medicine to treat pain", "making medicine for diabetes and for stuffing pillows", "making packing materials and fishing nets", "making medicine to lower cholesterol", "cleaning fabircs used in making clothes" ,"making medicine to treat an upset stomach"]
         
         
         askQuestion()
-        
         
     }
     
@@ -51,12 +50,6 @@ class QuestionsViewController: UIViewController {
     func askQuestion(action: UIAlertAction! = nil) {
         
         print(donePlants.count)
-        
-        //MOD DONE
-        if donePlants.count >= 5 {
-            self.performSegueWithIdentifier("doneQuiz", sender: nil)
-            return
-        }
 
         
         // MOD
@@ -71,6 +64,7 @@ class QuestionsViewController: UIViewController {
             }
         ranAnswer1.text = answers[ranIndex1]
         ranAnswer2.text = answers[ranIndex2]
+        
         return
     }
     

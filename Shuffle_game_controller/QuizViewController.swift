@@ -46,7 +46,7 @@ class QuizViewController: UIViewController {
         
         // MOD FOR DEVEL
         myplant.layer.borderWidth = 1
-       
+        
         
         askQuestion() // this does the main work of the script
         
@@ -55,6 +55,12 @@ class QuizViewController: UIViewController {
     //inout plants: Int, inout _ arraytwo: Int
     
     func askQuestion(action: UIAlertAction! = nil) {
+        
+        //MOD DONE
+        if donePlants.count == 10 {
+            self.performSegueWithIdentifier("doneQuiz", sender: self)
+            return
+        }
         
         if color == 0 { //blue ipad ***make sure button tags are 1, 2 and 3 for blue, black, pink
             randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) // will generate a number between 0-10

@@ -11,5 +11,9 @@ import GameplayKit
 
 
 class CompleteViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
 }
