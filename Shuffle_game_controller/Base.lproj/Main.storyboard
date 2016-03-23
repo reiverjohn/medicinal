@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s6H-o3-fVc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jje-BE-xBH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYg-Le-0ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="564"/>
+            <point key="canvasLocation" x="84" y="573"/>
         </scene>
         <!--WrongQRController-->
         <scene sceneID="0MK-3w-OOa">
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEw-NY-6b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="1426"/>
+            <point key="canvasLocation" x="2547" y="1419"/>
         </scene>
         <!--Ipad View Controller-->
         <scene sceneID="4zA-AX-EAP">
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1k-5J-ejd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2114" y="556"/>
+            <point key="canvasLocation" x="888" y="573"/>
         </scene>
         <!--Complete View Controller-->
         <scene sceneID="8Z4-KV-tWp">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-mB-YcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783" y="1332"/>
+            <point key="canvasLocation" x="1740" y="1371"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="FB2-sS-vEA">
@@ -240,12 +240,12 @@
                         <outlet property="myplant" destination="BsA-j6-pZA" id="Ooy-Br-kGY"/>
                         <outlet property="qrbutton" destination="f4e-vU-riX" id="fi7-JM-LYO"/>
                         <segue destination="9AS-Zl-kEv" kind="show" identifier="segueToQRScanner" id="KDS-e5-Y5o"/>
-                        <segue destination="w3a-1Q-6og" kind="presentation" identifier="doneQuiz" id="8AE-GT-bjN"/>
+                        <segue destination="w3a-1Q-6og" kind="presentation" identifier="doneQuiz" id="j7m-v4-Dd8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GF-fa-nSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2819" y="547"/>
+            <point key="canvasLocation" x="1740" y="573"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mD3-yz-2L4">
@@ -259,16 +259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
-                                <rect key="frame" x="24" y="546" width="101" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="Ac7-28-ldp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
                                 <rect key="frame" x="133" y="546" width="462" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
@@ -278,6 +269,15 @@
                                 <rect key="frame" x="552" y="95" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
+                                <rect key="frame" x="24" y="546" width="101" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Ac7-28-ldp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -295,13 +295,13 @@
                     <connections>
                         <outlet property="lblQRCodeLabel" destination="dX9-bt-pY1" id="pFi-Xc-eAg"/>
                         <outlet property="lblQRCodeResult" destination="YeX-dk-S7x" id="RoZ-Mp-24L"/>
-                        <segue destination="okr-a4-p6g" kind="presentation" identifier="trueTrans" id="SwB-D5-Jf2"/>
                         <segue destination="aXK-it-N35" kind="presentation" identifier="falseTrans" id="3yx-Ak-1Ir"/>
+                        <segue destination="okr-a4-p6g" kind="presentation" identifier="trueTrans" id="jT3-bY-HF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmQ-1u-40Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="564"/>
+            <point key="canvasLocation" x="2547" y="573"/>
         </scene>
         <!--Questions View Controller-->
         <scene sceneID="UJc-TZ-KW8">
@@ -334,23 +334,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-nA-dJd">
-                                <rect key="frame" x="395" y="214" width="118" height="30"/>
+                                <rect key="frame" x="85" y="244" width="118" height="30"/>
                                 <state key="normal" title="Choose Answer 1"/>
+                                <connections>
+                                    <segue destination="lNU-DI-Yas" kind="unwind" unwindAction="myUnwindAction:" id="Zed-zK-ygk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-yv-7Jw">
-                                <rect key="frame" x="395" y="373" width="121" height="30"/>
+                                <rect key="frame" x="85" y="414" width="121" height="30"/>
                                 <state key="normal" title="Choose Answer 3"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
-                                <rect key="frame" x="395" y="293" width="120" height="30"/>
+                                <rect key="frame" x="85" y="329" width="120" height="30"/>
                                 <state key="normal" title="Choose Answer 2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xij-Dn-I7d">
-                                <rect key="frame" x="59" y="452" width="98" height="30"/>
-                                <state key="normal" title="Next Question"/>
-                                <connections>
-                                    <segue destination="jWh-B1-Ccj" kind="show" identifier="SequeToQuiz" id="LOo-7G-tzH"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
                                 <rect key="frame" x="85" y="209" width="302" height="35"/>
@@ -358,6 +354,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xij-Dn-I7d">
+                                <rect key="frame" x="85" y="484" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <segue destination="jWh-B1-Ccj" kind="presentation" identifier="SequeToQuiz" id="FEu-3q-fSa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -368,36 +371,20 @@
                         <outlet property="ranAnswer1" destination="AFc-Mp-BDS" id="K5w-1c-qVo"/>
                         <outlet property="ranAnswer2" destination="hzJ-mV-0HO" id="sp6-gt-syf"/>
                         <outlet property="rightanswer" destination="ma4-6e-UHn" id="1hf-Gq-PVe"/>
+                        <segue destination="lNU-DI-Yas" kind="unwind" unwindAction="myUnwindAction:" id="Hir-uJ-1Wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lNU-DI-Yas" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4236" y="571"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jbf-wd-40e">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s6H-o3-fVc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fGy-JR-Y96">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Jje-BE-xBH" kind="relationship" relationship="rootViewController" id="wVO-Pb-Xak"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1e-Jz-FYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="798" y="564"/>
+            <point key="canvasLocation" x="3343" y="573"/>
         </scene>
     </scenes>
     <resources>
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FEu-3q-fSa"/>
         <segue reference="KDS-e5-Y5o"/>
-        <segue reference="LOo-7G-tzH"/>
     </inferredMetricsTieBreakers>
 </document>

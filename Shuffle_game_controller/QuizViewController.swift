@@ -36,6 +36,16 @@ class QuizViewController: UIViewController {
         self.navigationItem.hidesBackButton = true // Hide the back button so players can't go back
         plants += ["cotton", "oats", "mint", "chamomile", "beet", "willow", "echinacea", "alfalfa", "madder", "calendula", "wheat", "flax", "lemon_balm", "eyeball_plant", "onion", "bedstraw", "gypsywort", "pumpkin", "sweet_pea", "st_johns_wort", "sunflower", "amaranth", "lavender", "aloe", "poppy", "buckwheat", "ramie", "red_clover", "fullers_teasel", "ginger"] // case sensitive name of plants images in assess folder
         
+        if donePlants.count == 10 {
+            print ("DONE")
+            dispatch_async(dispatch_get_main_queue()) {
+                [unowned self] in
+                self.performSegueWithIdentifier("doneQuiz", sender: nil)
+            }
+            //self.gotoEnding()
+        }
+        else {
+            
         Image1.layer.borderWidth = 1 //these lines give the image boxes a nice border and frame so they are easier to see
         Image2.layer.borderWidth = 1
         Image3.layer.borderWidth = 1
@@ -43,12 +53,14 @@ class QuizViewController: UIViewController {
         Image1.layer.borderColor = UIColor.lightGrayColor().CGColor
         Image2.layer.borderColor = UIColor.lightGrayColor().CGColor
         Image3.layer.borderColor = UIColor.lightGrayColor().CGColor
-        
-        // MOD FOR DEVEL
+                // MOD FOR DEVEL
         myplant.layer.borderWidth = 1
         
         
-        askQuestion() // this does the main work of the script
+            
+            askQuestion() // this does the main work of the scriptf
+            
+        }
         
     }
     
@@ -56,11 +68,7 @@ class QuizViewController: UIViewController {
     
     func askQuestion(action: UIAlertAction! = nil) {
         
-        //MOD DONE
-        if donePlants.count == 10 {
-            self.performSegueWithIdentifier("doneQuiz", sender: self)
-            return
-        }
+        
         
         if color == 0 { //blue ipad ***make sure button tags are 1, 2 and 3 for blue, black, pink
             randomPlant = GKRandomSource.sharedRandom().nextIntWithUpperBound(10) // will generate a number between 0-10
@@ -110,6 +118,15 @@ class QuizViewController: UIViewController {
             QRViewControllerSegue.donePlants = donePlants
 
         }
+            if segue.identifier == "doneQuiz" {
+                let CompleteViewControllerSegue = segue.destinationViewController as! CompleteViewController
+                CompleteViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
+                CompleteViewControllerSegue.donePlants = donePlants
+            }
     }
+    @IBAction func gotoEnding(action: UIAlertAction! = nil) {
+        self.performSegueWithIdentifier("doneQuiz", sender: nil)  //This function can be called to start the segue to the score page
+    }
+
 
 }

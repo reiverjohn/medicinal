@@ -17,6 +17,7 @@
 		C260F61F1C998E36000F849A /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F6171C998E36000F849A /* ViewController1.swift */; };
 		C265785A1CA1976F00DE4A65 /* WrongQRController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26578591CA1976F00DE4A65 /* WrongQRController.swift */; };
 		C265785C1CA1CD7800DE4A65 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265785B1CA1CD7800DE4A65 /* CompleteViewController.swift */; };
+		C2A56A171CA3005A009227BA /* scoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A56A161CA3005A009227BA /* scoreViewController.swift */; };
 		C5A6308C1BFE68ED008CAC2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6308A1BFE68ED008CAC2B /* Main.storyboard */; };
 		C5A630911BFE68ED008CAC2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6308F1BFE68ED008CAC2B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		C260F6171C998E36000F849A /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		C26578591CA1976F00DE4A65 /* WrongQRController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrongQRController.swift; sourceTree = "<group>"; };
 		C265785B1CA1CD7800DE4A65 /* CompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		C2A56A161CA3005A009227BA /* scoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoreViewController.swift; sourceTree = "<group>"; };
 		C5A630831BFE68EC008CAC2B /* Shuffle_game_controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shuffle_game_controller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A6308B1BFE68ED008CAC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5A630901BFE68ED008CAC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				C260F6141C998E36000F849A /* QRViewController.swift */,
 				C26578591CA1976F00DE4A65 /* WrongQRController.swift */,
 				C260F6151C998E36000F849A /* QuestionsViewController.swift */,
+				C2A56A161CA3005A009227BA /* scoreViewController.swift */,
 				C260F6161C998E36000F849A /* QuizViewController.swift */,
 				C260F6171C998E36000F849A /* ViewController1.swift */,
 				C5A6308A1BFE68ED008CAC2B /* Main.storyboard */,
@@ -165,6 +168,7 @@
 				C260F60F1C998E16000F849A /* AppDelegate.swift in Sources */,
 				C260F61D1C998E36000F849A /* QuestionsViewController.swift in Sources */,
 				C260F61B1C998E36000F849A /* IpadViewController.swift in Sources */,
+				C2A56A171CA3005A009227BA /* scoreViewController.swift in Sources */,
 				C265785C1CA1CD7800DE4A65 /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

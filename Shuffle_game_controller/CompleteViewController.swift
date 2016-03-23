@@ -12,6 +12,14 @@ import GameplayKit
 
 class CompleteViewController: UIViewController {
     
+    // MOD
+    var array:Int!
+    var plants = [String]()
+    var answers = [String]()
+    var randomPlant = Int() // this is the random number that shows which plant to show
+    //var doneList = [Int:String]()
+    var donePlants: Set<String> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

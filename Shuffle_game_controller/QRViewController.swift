@@ -127,19 +127,25 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             vwQRCode?.frame = objBarCode.bounds;
             if objMetadataMachineReadableCodeObject.stringValue != nil {
                 // Code added to handle output result
-                if objMetadataMachineReadableCodeObject.stringValue == plants[array] {
                     //lblQRCodeResult.text = "True"
                     //self.dismissViewControllerAnimated(true, completion:{self.performSegueWithIdentifier("trueTrans", sender: nil)})
-                    self.performSegueWithIdentifier("trueTrans", sender: self)
-                    return
-                    }
-                else {
-                    //lblQRCodeResult.text = objMetadataMachineReadableCodeObject.stringValue
-                    //lblQRCodeResult.text = "False: " + objMetadataMachineReadableCodeObject.stringValue
-                    self.performSegueWithIdentifier("falseTrans", sender: nil)
-                    return
+                func viewDidAppear(animated: Bool) {
+                    super.viewDidAppear(animated)
+                    if objMetadataMachineReadableCodeObject.stringValue == plants[array] {
+                        self.performSegueWithIdentifier("trueTrans", sender: nil)
+                        return
+                        }
+                    else {
+                        //lblQRCodeResult.text = objMetadataMachineReadableCodeObject.stringValue
+                        //lblQRCodeResult.text = "False: " + objMetadataMachineReadableCodeObject.stringValue
+                        self.performSegueWithIdentifier("falseTrans", sender: nil)
+                        
+                        return
+                        }
+                        
                     
-                }
+                }  // end viewdidappear
+                viewDidAppear(true)
                 
             }
         }
