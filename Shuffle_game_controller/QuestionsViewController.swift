@@ -24,6 +24,7 @@ class QuestionsViewController: UIViewController {
     var ranIndex1 = Int()
     var ranIndex2 = Int()
     var donePlants: Set<String> = []
+    var answerPosition = Int()
     
     @IBAction func buttonTapped(sender: UIButton) {
         
@@ -49,9 +50,11 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     
     // MOD FOR DEVEL
-    @IBOutlet weak var rightanswer: UILabel!
+    var rightanswer = String()
+    
     @IBOutlet weak var ranAnswer1: UILabel!
     @IBOutlet weak var ranAnswer2: UILabel!
+    @IBOutlet weak var ranAnswer3: UILabel!
     
      override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,24 +68,42 @@ class QuestionsViewController: UIViewController {
 
     
     
-    //func askQuestion(action: UIAlertAction! = nil) {
       func askQuestion(action: UIAlertAction!) {
         print(donePlants.count)
-
         
         // MOD
-        rightanswer.text = answers[array]   // This is the answer corresponding to the selected plant
-        correctAnswer = 0
-        ranIndex1 = GKRandomSource.sharedRandom().nextIntWithUpperBound(answers.count)          // Generate the first random incorrect answer
+        rightanswer = answers[array]   // This is the answer corresponding to the selected plant
+        ranIndex1 = Int(arc4random_uniform(UInt32(answers.count))    )      // Generate the first random incorrect answer
         while ranIndex1 == array {
-            ranIndex1 = GKRandomSource.sharedRandom().nextIntWithUpperBound(answers.count)      // This makes sure I don't repeat a question choice
+            ranIndex1 = Int(arc4random_uniform(UInt32(answers.count))    )     // This makes sure I don't repeat a question choice
         }
-        ranIndex2 = GKRandomSource.sharedRandom().nextIntWithUpperBound(answers.count)            // Generate the second random incorrect answer
+        ranIndex2 = Int(arc4random_uniform(UInt32(answers.count))    )           // Generate the second random incorrect answer
         while (ranIndex1 == ranIndex2) && (ranIndex2 != array) {
-                ranIndex2 = GKRandomSource.sharedRandom().nextIntWithUpperBound(answers.count)    // This makes sure I don't repeat a question choice
+                ranIndex2 = Int(arc4random_uniform(UInt32(answers.count))    )   // This makes sure I don't repeat a question choice
             }
-        ranAnswer1.text = answers[ranIndex1]
-        ranAnswer2.text = answers[ranIndex2]
+        //answerPosition = GKRandomSource.sharedRandom().nextIntWithUpperBound(2)
+        answerPosition = Int(arc4random_uniform(3))
+        if answerPosition == 0 {
+            ranAnswer1.text = rightanswer
+            correctAnswer = 0
+            ranAnswer2.text = answers[ranIndex1]
+            ranAnswer3.text = answers[ranIndex2]
+            
+        }
+        else if answerPosition == 1 {
+            ranAnswer2.text = rightanswer
+            correctAnswer = 1
+            ranAnswer1.text = answers[ranIndex1]
+            ranAnswer3.text = answers[ranIndex2]
+        }
+        else {
+            ranAnswer3.text = rightanswer
+            correctAnswer = 2
+            ranAnswer1.text = answers[ranIndex1]
+            ranAnswer2.text = answers[ranIndex2]
+            
+        }
+       
         self.performSegueWithIdentifier("SequeToQuiz", sender: nil)
         return
     }

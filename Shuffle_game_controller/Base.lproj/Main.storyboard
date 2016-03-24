@@ -411,9 +411,9 @@
                         <outlet property="button1" destination="bUc-nA-dJd" id="AqN-DO-r03"/>
                         <outlet property="button2" destination="3dW-Sc-ksA" id="bR8-rm-gdI"/>
                         <outlet property="button3" destination="xjY-yv-7Jw" id="svN-EO-4eO"/>
-                        <outlet property="ranAnswer1" destination="AFc-Mp-BDS" id="K5w-1c-qVo"/>
-                        <outlet property="ranAnswer2" destination="hzJ-mV-0HO" id="sp6-gt-syf"/>
-                        <outlet property="rightanswer" destination="ma4-6e-UHn" id="1hf-Gq-PVe"/>
+                        <outlet property="ranAnswer1" destination="ma4-6e-UHn" id="zXU-yY-o2M"/>
+                        <outlet property="ranAnswer2" destination="AFc-Mp-BDS" id="2jt-Su-O54"/>
+                        <outlet property="ranAnswer3" destination="hzJ-mV-0HO" id="taI-EC-dp3"/>
                         <segue destination="lNU-DI-Yas" kind="unwind" unwindAction="myUnwindAction:" id="Hir-uJ-1Wp"/>
                     </connections>
                 </viewController>
