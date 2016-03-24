@@ -36,6 +36,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     //var doneList = [Int:String]()
     var donePlants: Set<String> = []
     
+
      override func  viewDidLoad() {
         super.viewDidLoad()
         self.configureVideoCapture()
@@ -65,7 +66,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     }
     // END SEGUE MOD
     
-        
+    
+    
     func configureVideoCapture() {
         let objCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         var error:NSError?
@@ -77,15 +79,17 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             error = error1
             objCaptureDeviceInput = nil
         }
+        
         if (error != nil) {
             //let alertView:UIAlertView = UIAlertView(title: "Device Error", message:"Device not Supported for this Application", delegate: nil, cancelButtonTitle: "Ok Done")
             let alertView = UIAlertController(title: "Device Error", message:"Device not Supported for this Application", preferredStyle: .Alert)
             //alertView.show()
             let yesAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
-            let noAction = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in}
+            let noAction = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in }
             alertView.addAction(yesAction)
             alertView.addAction(noAction)
             self.presentViewController(alertView, animated: true, completion: nil)
+            
             return
         }
 
@@ -95,6 +99,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         objCaptureSession?.addOutput(objCaptureMetadataOutput)
         objCaptureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
         objCaptureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+        
     }
     
     func addVideoPreviewLayer() {
@@ -128,26 +133,19 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             if objMetadataMachineReadableCodeObject.stringValue != nil {
                 // Code added to handle output result
                     //lblQRCodeResult.text = "True"
-                    //self.dismissViewControllerAnimated(true, completion:{self.performSegueWithIdentifier("trueTrans", sender: nil)})
-                func viewDidAppear(animated: Bool) {
-                    super.viewDidAppear(animated)
-                    if objMetadataMachineReadableCodeObject.stringValue == plants[array] {
-                        self.performSegueWithIdentifier("trueTrans", sender: nil)
-                        return
-                        }
-                    else {
-                        //lblQRCodeResult.text = objMetadataMachineReadableCodeObject.stringValue
-                        //lblQRCodeResult.text = "False: " + objMetadataMachineReadableCodeObject.stringValue
-                        self.performSegueWithIdentifier("falseTrans", sender: nil)
-                        
-                        return
-                        }
-                        
-                    
-                }  // end viewdidappear
-                viewDidAppear(true)
+                if objMetadataMachineReadableCodeObject.stringValue == plants[array] {
+                    self.performSegueWithIdentifier("trueTrans", sender: QRViewController())
+                    return
+                }
+                else {
+                    //lblQRCodeResult.text = objMetadataMachineReadableCodeObject.stringValue
+                    //lblQRCodeResult.text = "False: " + objMetadataMachineReadableCodeObject.stringValue
+                    self.performSegueWithIdentifier("falseTrans", sender: nil)
+                    return
+                }
                 
-            }
-        }
-    }
-}
+                
+            }  // end objMetadataMachineReadableCode conditional
+        } // end objMetadataMachineReadableCodeObject.type conditional
+    }  // end caputureOutput function
+}  // end QRViewController class

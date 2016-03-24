@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jje-BE-xBH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YEo-5s-yaW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6r6-4e-VMh">
+            <objects>
+                <navigationController id="YEo-5s-yaW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J12-RW-5bF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jje-BE-xBH" kind="relationship" relationship="rootViewController" id="FDi-IH-HyP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2b-vz-TJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-863" y="573"/>
+        </scene>
         <!--View Controller1-->
         <scene sceneID="i0O-ba-En2">
             <objects>
@@ -44,7 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Go!"/>
                                 <connections>
-                                    <segue destination="Q2V-rm-Ow8" kind="show" id="FjM-27-YPI"/>
+                                    <segue destination="Q2V-rm-Ow8" kind="show" identifier="toIpadViewController" id="FjM-27-YPI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,7 +275,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NO QRCode text detacted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeX-dk-S7x" userLabel="LblQR Code Result">
                                 <rect key="frame" x="133" y="546" width="462" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.2078431547" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
@@ -271,7 +287,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QRCode Text :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-bt-pY1" userLabel="LblQR Code Label">
                                 <rect key="frame" x="24" y="546" width="101" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="Ac7-28-ldp"/>
@@ -337,16 +353,15 @@
                                 <rect key="frame" x="85" y="244" width="118" height="30"/>
                                 <state key="normal" title="Choose Answer 1"/>
                                 <connections>
-                                    <segue destination="lNU-DI-Yas" kind="unwind" unwindAction="myUnwindAction:" id="Zed-zK-ygk"/>
+                                    <action selector="buttonTapped:" destination="okr-a4-p6g" eventType="touchUpInside" id="DBs-ju-268"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-yv-7Jw">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-yv-7Jw">
                                 <rect key="frame" x="85" y="414" width="121" height="30"/>
                                 <state key="normal" title="Choose Answer 3"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
-                                <rect key="frame" x="85" y="329" width="120" height="30"/>
-                                <state key="normal" title="Choose Answer 2"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="okr-a4-p6g" eventType="touchUpInside" id="knR-nF-jNu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-6e-UHn">
                                 <rect key="frame" x="85" y="209" width="302" height="35"/>
@@ -359,6 +374,13 @@
                                 <state key="normal" title="Next Question"/>
                                 <connections>
                                     <segue destination="jWh-B1-Ccj" kind="presentation" identifier="SequeToQuiz" id="FEu-3q-fSa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
+                                <rect key="frame" x="85" y="329" width="120" height="30"/>
+                                <state key="normal" title="Choose Answer 2"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="okr-a4-p6g" eventType="touchUpInside" id="V5Q-yc-ElP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -384,7 +406,7 @@
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FEu-3q-fSa"/>
         <segue reference="KDS-e5-Y5o"/>
+        <segue reference="FEu-3q-fSa"/>
     </inferredMetricsTieBreakers>
 </document>
