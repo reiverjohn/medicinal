@@ -21,6 +21,7 @@ class QuizViewController: UIViewController {
     var lower = 0
     var upper = 0
     var current = 0
+    var score = Int()
     
     // MOD FOR DEVEL
     @IBOutlet weak var myplant: UITextView!
@@ -116,12 +117,14 @@ class QuizViewController: UIViewController {
             let QRViewControllerSegue = segue.destinationViewController as! QRViewController
             QRViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
             QRViewControllerSegue.donePlants = donePlants
+            QRViewControllerSegue.score = score
 
         }
             if segue.identifier == "doneQuiz" {
                 let CompleteViewControllerSegue = segue.destinationViewController as! CompleteViewController
                 CompleteViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
                 CompleteViewControllerSegue.donePlants = donePlants
+                CompleteViewControllerSegue.score = score
             }
     }
     @IBAction func gotoEnding(action: UIAlertAction! = nil) {

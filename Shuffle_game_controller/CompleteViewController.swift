@@ -19,9 +19,16 @@ class CompleteViewController: UIViewController {
     var randomPlant = Int() // this is the random number that shows which plant to show
     //var doneList = [Int:String]()
     var donePlants: Set<String> = []
+    var score = Int()
 
+
+    @IBOutlet weak var myScore: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        myScore.text = String(score)
+        myScore.layer.borderWidth = 0
     }
 
 }

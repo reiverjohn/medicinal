@@ -14,6 +14,7 @@ class IpadViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     var ipad_color = 0
+    var score = 0
     
 override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ override func viewDidLoad() {
         if segue.identifier == "segueToQuiz" {  //This here tells the Navigation Controller which segue to use.
             let QuizViewControllerSegue = segue.destinationViewController as! QuizViewController
             QuizViewControllerSegue.color = ipad_color  //This passes the value of the ipad color to the next View Controller
+            QuizViewControllerSegue.score = score
         }
     }
     

@@ -28,6 +28,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var objCaptureSession:AVCaptureSession?
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
     var vwQRCode:UIView?
+    var score = Int()
     
     // MOD
     var plants = [String]()
@@ -57,11 +58,13 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             let QuestionsViewControllerSegue = segue.destinationViewController as! QuestionsViewController
             QuestionsViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
             QuestionsViewControllerSegue.donePlants = donePlants
+            QuestionsViewControllerSegue.score = score
         }
         if segue.identifier == "falseTrans" {
             let WrongQRControllerSegue = segue.destinationViewController as! WrongQRController
             WrongQRControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
             WrongQRControllerSegue.donePlants = donePlants
+            WrongQRControllerSegue.score = score
         }
     }
     // END SEGUE MOD

@@ -34,10 +34,10 @@ class QuestionsViewController: UIViewController {
             score += 1
         } else {
             title = "Wrong"
-            score -= 1
+            score += 0
         }
         let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
-            ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
+        ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
         presentViewController(ac, animated: true, completion: nil)
         
     }
@@ -93,6 +93,7 @@ class QuestionsViewController: UIViewController {
         if segue.identifier == "SequeToQuiz" {  //This here tells the Navigation Controller which segue to use.
             let QuizViewControllerSegue = segue.destinationViewController as! QuizViewController
             QuizViewControllerSegue.donePlants = donePlants
+            QuizViewControllerSegue.score = score
         }
     }
     
