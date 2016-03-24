@@ -18,7 +18,7 @@ class QuestionsViewController: UIViewController {
     var correctAnswer = Int()
     
     var plants = [String]()
-    //var color = 0
+    var color = Int()
     var answers = [String]()
     var randomPlant = Int() // this is the random number that shows which plant to show
     var ranIndex1 = Int()
@@ -58,8 +58,8 @@ class QuestionsViewController: UIViewController {
     
      override func viewDidLoad() {
         super.viewDidLoad()
-        plants += ["cotton", "oats", "mint", "chamomile", "beet", "willow", "echinacea", "alfalfa", "madder", "calendula", "wheat", "flax", "lemon_balm", "eyeball_plant", "onion", "bedstraw", "gypsywort", "pumpkin", "sweet_pea", "st_johns_wort", "sunflower", "amaranth", "lavender", "aloe", "poppy", "buckwheat", "ramie", "red_clover", "fullers_teasel", "ginger"]
-        answers += ["the jeans I wear", "the cereal, granola, or cookies I eat", "flavoring in my toothpaste", "the tea I drink to help me feel better", "food coloring", "medicine I take for a headache", "medicine I take for a cold", "food for cattle", "dying fabrics red", "dying fabrics yellow", "the bread I eat", "making linen sheets", "tea I drink and candy I eat", "treating toothaches", "practicing how to use a microscope", "the bed I sleep in", "dying fabrics black", "making a holiday pie", "making perfume", "treating depression", "making cooking oil", "dying fabrics red and as an edible grain", "making essential oils, perfumes and cosmetics", "treating a sunburng", "making medicine to treat pain", "making medicine for diabetes and for stuffing pillows", "making packing materials and fishing nets", "making medicine to lower cholesterol", "cleaning fabircs used in making clothes" ,"making medicine to treat an upset stomach"]
+        //plants += ["cotton", "oats", "mint", "chamomile", "beet", "willow", "echinacea", "alfalfa", "madder", "calendula", "wheat", "flax", "lemon_balm", "eyeball_plant", "onion", "bedstraw", "gypsywort", "pumpkin", "sweet_pea", "st_johns_wort", "sunflower", "amaranth", "lavender", "aloe", "poppy", "buckwheat", "ramie", "red_clover", "fullers_teasel", "ginger"]
+        answers += ["the jeans I wear", "the cereal, granola, or cookies I eat", "flavoring in my toothpaste", "the tea I drink to help me feel better", "food coloring", "medicine I take for a headache", "medicine I take for a cold", "food for cattle", "dying fabrics red", "dying fabrics yellow", "the bread I eat", "making linen sheets", "tea I drink and candy I eat", "treating toothaches", "practicing how to use a microscope", "the bed I sleep in", "dying fabrics black", "making a holiday pie", "making perfume", "treating depression", "making cooking oil", "dying fabrics red and as an edible grain", "making essential oils, perfumes and cosmetics", "treating a sunburn", "making medicine to treat pain", "making medicine for diabetes and for stuffing pillows", "making packing materials and fishing nets", "making medicine to lower cholesterol", "cleaning fabircs used in making clothes" ,"making medicine to treat an upset stomach"]
                 
         askQuestion(nil)
         
@@ -78,7 +78,7 @@ class QuestionsViewController: UIViewController {
             ranIndex1 = Int(arc4random_uniform(UInt32(answers.count))    )     // This makes sure I don't repeat a question choice
         }
         ranIndex2 = Int(arc4random_uniform(UInt32(answers.count))    )           // Generate the second random incorrect answer
-        while (ranIndex1 == ranIndex2) && (ranIndex2 != array) {
+        while (ranIndex1 == ranIndex2) || (ranIndex2 == array) {
                 ranIndex2 = Int(arc4random_uniform(UInt32(answers.count))    )   // This makes sure I don't repeat a question choice
             }
         //answerPosition = GKRandomSource.sharedRandom().nextIntWithUpperBound(2)
@@ -115,6 +115,9 @@ class QuestionsViewController: UIViewController {
             let QuizViewControllerSegue = segue.destinationViewController as! QuizViewController
             QuizViewControllerSegue.donePlants = donePlants
             QuizViewControllerSegue.score = score
+            QuizViewControllerSegue.plants = plants
+            QuizViewControllerSegue.answers = answers
+            QuizViewControllerSegue.color = color
         }
     }
     

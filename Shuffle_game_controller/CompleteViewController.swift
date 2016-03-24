@@ -17,7 +17,7 @@ class CompleteViewController: UIViewController {
     var plants = [String]()
     var answers = [String]()
     var randomPlant = Int() // this is the random number that shows which plant to show
-    //var doneList = [Int:String]()
+    var color = Int()
     var donePlants: Set<String> = []
     var score = Int()
 

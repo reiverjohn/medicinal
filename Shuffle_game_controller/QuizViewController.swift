@@ -17,11 +17,12 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var Image3: UIImageView!
     @IBOutlet weak var qrbutton: UIButton!
     
-    var color = 0
+    var color = Int()
     var lower = 0
     var upper = 0
     var current = 0
     var score = Int()
+    var answers = [String]()
     
     // MOD FOR DEVEL
     @IBOutlet weak var myplant: UITextView!
@@ -35,7 +36,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true // Hide the back button so players can't go back
-        plants += ["cotton", "oats", "mint", "chamomile", "beet", "willow", "echinacea", "alfalfa", "madder", "calendula", "wheat", "flax", "lemon_balm", "eyeball_plant", "onion", "bedstraw", "gypsywort", "pumpkin", "sweet_pea", "st_johns_wort", "sunflower", "amaranth", "lavender", "aloe", "poppy", "buckwheat", "ramie", "red_clover", "fullers_teasel", "ginger"] // case sensitive name of plants images in assess folder
+        
         
         if donePlants.count == 10 {
             print ("DONE")
@@ -118,6 +119,9 @@ class QuizViewController: UIViewController {
             QRViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
             QRViewControllerSegue.donePlants = donePlants
             QRViewControllerSegue.score = score
+            QRViewControllerSegue.plants = plants
+            QRViewControllerSegue.answers = answers
+            QRViewControllerSegue.color = color
 
         }
             if segue.identifier == "doneQuiz" {
@@ -125,6 +129,9 @@ class QuizViewController: UIViewController {
                 CompleteViewControllerSegue.array = randomPlant  //This passes the value of the plant to the next View Controller
                 CompleteViewControllerSegue.donePlants = donePlants
                 CompleteViewControllerSegue.score = score
+                CompleteViewControllerSegue.plants = plants
+                CompleteViewControllerSegue.answers = answers
+                CompleteViewControllerSegue.color = color
             }
     }
     @IBAction func gotoEnding(action: UIAlertAction! = nil) {
