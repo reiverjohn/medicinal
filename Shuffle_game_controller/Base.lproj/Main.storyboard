@@ -390,13 +390,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xij-Dn-I7d">
-                                <rect key="frame" x="85" y="484" width="98" height="30"/>
-                                <state key="normal" title="Next Question"/>
-                                <connections>
-                                    <segue destination="jWh-B1-Ccj" kind="presentation" identifier="SequeToQuiz" id="FEu-3q-fSa"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dW-Sc-ksA">
                                 <rect key="frame" x="85" y="329" width="120" height="30"/>
                                 <state key="normal" title="Choose Answer 2"/>
@@ -415,6 +408,7 @@
                         <outlet property="ranAnswer2" destination="AFc-Mp-BDS" id="2jt-Su-O54"/>
                         <outlet property="ranAnswer3" destination="hzJ-mV-0HO" id="taI-EC-dp3"/>
                         <segue destination="lNU-DI-Yas" kind="unwind" unwindAction="myUnwindAction:" id="Hir-uJ-1Wp"/>
+                        <segue destination="jWh-B1-Ccj" kind="presentation" identifier="SequeToQuiz" id="cXv-EC-9dI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncz-sq-tl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,7 +421,7 @@
         <image name="detective" width="391" height="311"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cXv-EC-9dI"/>
         <segue reference="KDS-e5-Y5o"/>
-        <segue reference="FEu-3q-fSa"/>
     </inferredMetricsTieBreakers>
 </document>
